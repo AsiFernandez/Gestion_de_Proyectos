@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/empleados', 'EmpleadoController@index')->name('empleado.index');
+Route::get('/proyectos', 'ProyectoController@index')->name('proyecto.index');
+Route::get('/departamentos', 'DepartamentoController@index')->name('departamentos.index');

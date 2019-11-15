@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Empleado;
 use Illuminate\Http\Request;
 
-class empleadoController extends Controller
+class EmpleadoController extends Controller
 {
     public function index(){
-        $empleados::all();
+        $empleados = Empleado::all();
         return view('empleados/index')->with('empleados',$empleados);
     }
 }

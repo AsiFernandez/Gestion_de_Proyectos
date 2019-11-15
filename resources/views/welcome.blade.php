@@ -12,17 +12,16 @@
         <link rel="stylesheet" href="{{asset('assets/js/bootstrap.min.js')}}">
     </head>
     <body>
-        <nav class="navbar navbar-expand-sm bg-dark
-        ">
+        <nav class="navbar navbar-expand-sm bg-dark">
             <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Empleados</a>
+                <a class="nav-link" href="{{route('empleado.index')}}">Empleados</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Proyectos</a>
+                <a class="nav-link" href="{{route('proyecto.index')}}">Proyectos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Departamentos</a>
+                <a class="nav-link" href="{{route('departamentos.index')}}">Departamentos</a>
             </li>
             </ul>
         </nav> 
