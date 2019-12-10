@@ -14,10 +14,6 @@ class departamentosSeeder extends Seeder
      */
     public function run()
     {
-      for ($i=0; $i < 3; $i++) { 
-        Departamento::insert([
-          'nombre'=> Str::random(10)
-        ]);
-    }       
+      factory(Departamento::class)->create();        
     }
 }

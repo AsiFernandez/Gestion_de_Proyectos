@@ -40,14 +40,14 @@
           </tr>
           @foreach($empleados as $empleado)
             <tr>
-              <td>{{$empleado->id}}</td>
+              <td><a href="{{route('empleados.show',$empleado->id)}}">{{$empleado->id}}</a></td>
               <td>{{$empleado->nombre}}</td>
               <td>{{$empleado->apellido}}</td>
               <td>{{$empleado->email}}</td>
               <td>{{$empleado->telefono}}</td>
-              <td>@isset($empleado->proyecto)
-              {{$empleado->proyecto->nombre}}
-              @endisset</td>
+              @isset($empleado->proyecto)
+                <td><a href="{{route('proyecto.show',$empleado->proyecto->id)}}">{{$empleado->proyecto->nombre}}</td>
+              @endisset
             </tr>
           @endforeach
         </table>

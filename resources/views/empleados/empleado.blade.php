@@ -37,17 +37,18 @@
         <th>Fecha fin</th>
         <th>Horas estimadas</th>
       </tr>
-    
+      
       <tr>
-        <td><a href="{{route('empleado.vista',$datos->id)}}">{{$datos->id}}</a></td>
-        @foreach ($proyectos as $id->$datos)
-        <td>{{$datos->nombre}}</td>
-        <td>{{$datos->titulo}}</td>
-        <td>{{$datos->fechainicio}}</td>
-        <td>{{$datos->fechafin}}</td>
-        <td>{{$datos->horasestimadas}}</td>
-      </tr>
-    @endforeach
+      @foreach($listaEmpleados as $empleado)
+  <tr>
+    <td><a href="{{route('empleados.show',$empleado->id)}}">{{$empleado->id}}</a></td>
+    <td>{{$empleado->nombre}}</td>
+    <td>{{$empleado->apellido}}</td>
+    <td>{{$empleado->email}}</td>
+    <td>{{$empleado->telefono}}</td>
+    @isset($empleado->proyecto)<td><a href="{{route('proyectos.show',$empleado->proyecto->id)}}">{{$empleado->proyecto->nombre}}</a></td>@endisset
+  </tr>
+  @endforeach
     </table>
 
     </body>

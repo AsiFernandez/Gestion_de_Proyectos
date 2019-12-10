@@ -29,24 +29,14 @@
         </nav> 
 
         <table>
-      <tr>
-        <th>Id</th>
-        <th>Nombre</th>
-        <th>Titulo</th>
-        <th>Fecha Inicio</th>
-        <th>Fecha fin</th>
-        <th>Horas estimadas</th>
-      </tr>
-    @foreach ($proyectos as $id->$datos)
-      <tr>
-        <td>{{$datos->id}}</td>
-        <td>{{$datos->nombre}}</td>
-        <td>{{$datos->titulo}}</td>
-        <td>{{$datos->fechainicio}}</td>
-        <td>{{$datos->fechafin}}</td>
-        <td>{{$datos->horasestimadas}}</td>
-      </tr>
-    @endforeach
+      
+    ID --> {{$infoEmpleado->id}}<br>
+    NOMBRE --> {{$infoEmpleado->nombre}}<br>
+    APELLIDO --> {{$infoEmpleado->apellido}}<br>
+    EMAIL --> {{$infoEmpleado->email}}<br>
+    TELEFONO --> {{$infoEmpleado->telefono}}<br>
+    PROYECTO A CARGO --> @isset($infoEmpleado->proyecto){{$infoEmpleado->proyecto->nombre}}@endisset<br>    
+  
     </table>
 
     </body>

@@ -14,13 +14,17 @@ class empleadosSeeder extends Seeder
      */
     public function run()
     {
-        for ($i=0; $i < 10; $i++) { 
+      factory(Empleado::class, 5)->create(); 
+    }
+}
+
+/**
+ * for ($i=0; $i < 10; $i++) { 
 	        Empleado::insert([
 	          'nombre'=> Str::random(10),
 	          'apellido'=> Str::random(10),
 	          'email'=> Str::random(10)."@gmail.com",
 	          'telefono'=> Str::random(10)
-	        ]);
-    	}
-    }
-}
+          ]);
+          }
+ */

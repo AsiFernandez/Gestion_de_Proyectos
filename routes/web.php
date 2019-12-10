@@ -19,7 +19,7 @@ Route::get('/', function () {
 |Rutas para cosas del apartado empleados
 */
 Route::get('/empleados', 'EmpleadoController@index')->name('empleado.index');
-Route::get('/empleado/{id}', 'EmpleadoController@show')->name('empleado.vista');
+Route::get('/empleados/{id}', 'EmpleadoController@show')->name('empleados.show');
 
 /*
 |Rutas para cosas del apartado proyectos
@@ -31,3 +31,14 @@ Route::get('/proyectos', 'ProyectoController@index')->name('proyecto.index');
 */
 Route::get('/departamentos', 'DepartamentoController@index')->name('departamentos.index');
 
+
+/*
+|
+*/
+Route::get('proyectos', 'ProyectoController@index')->name('proyectos.index');
+Route::get('proyectos/create', 'ProyectoController@create')->name('proyectos.create');
+Route::post('photos', 'ProyectoController@store')->name('proyectos.store');
+Route::get('proyectos/{id}', 'ProyectoController@show')->name('proyectos.show');
+Route::get('proyectos/{id}/edit', 'ProyectoController@edit')->name('proyectos.edit');
+Route::get('proyectos/{id}', 'ProyectoController@update')->name('proyectos.update');
+Route::get('proyectos/{id}', 'ProyectoController@delete')->name('proyectos.destroy');
