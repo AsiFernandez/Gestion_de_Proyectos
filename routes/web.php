@@ -34,7 +34,7 @@ Route::get('/departamentos', 'DepartamentoController@index')->name('departamento
 
 /*
 |
-*/
+
 Route::get('proyectos', 'ProyectoController@index')->name('proyectos.index');
 Route::get('proyectos/create', 'ProyectoController@create')->name('proyectos.create');
 Route::post('photos', 'ProyectoController@store')->name('proyectos.store');
@@ -42,3 +42,4 @@ Route::get('proyectos/{id}', 'ProyectoController@show')->name('proyectos.show');
 Route::get('proyectos/{id}/edit', 'ProyectoController@edit')->name('proyectos.edit');
 Route::get('proyectos/{id}', 'ProyectoController@update')->name('proyectos.update');
 Route::get('proyectos/{id}', 'ProyectoController@delete')->name('proyectos.destroy');
+*/

@@ -13,7 +13,8 @@ class EmpleadoController extends Controller
 
     public function show($id)
     {
-        $infoEmpleado = Empleado::find($id);
-        return view('empleados.vistanueva', ['infoEmpleado' => $infoEmpleado]);
+        $empleado = Empleado::where('id',$id)->first();
+        return view('empleados/vistanueva', ['empleado'=>$empleado]);
+       
     }
 }

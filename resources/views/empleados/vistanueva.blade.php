@@ -28,16 +28,16 @@
             </ul>
         </nav> 
 
-        <table>
+       
       
-    ID --> {{$infoEmpleado->id}}<br>
-    NOMBRE --> {{$infoEmpleado->nombre}}<br>
-    APELLIDO --> {{$infoEmpleado->apellido}}<br>
-    EMAIL --> {{$infoEmpleado->email}}<br>
-    TELEFONO --> {{$infoEmpleado->telefono}}<br>
-    PROYECTO A CARGO --> @isset($infoEmpleado->proyecto){{$infoEmpleado->proyecto->nombre}}@endisset<br>    
+    ID  {{$empleado->id}}<br>
+    NOMBRE  {{$empleado->nombre}}<br>
+    APELLIDO  {{$empleado->apellido}}<br>
+    EMAIL  {{$empleado->email}}<br>
+    TELEFONO  {{$empleado->telefono}}<br>
+    PROYECTO A CARGO  @isset($empleado->proyecto){{$empleado->proyecto->nombre}}@endisset<br>    
   
-    </table>
+ 
 
     </body>
 </html>

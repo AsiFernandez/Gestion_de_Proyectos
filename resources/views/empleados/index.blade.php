@@ -46,7 +46,7 @@
               <td>{{$empleado->email}}</td>
               <td>{{$empleado->telefono}}</td>
               @isset($empleado->proyecto)
-                <td><a href="{{route('proyecto.show',$empleado->proyecto->id)}}">{{$empleado->proyecto->nombre}}</td>
+                <td><a href="">{{$empleado->proyecto->nombre}}</td>
               @endisset
             </tr>
           @endforeach
