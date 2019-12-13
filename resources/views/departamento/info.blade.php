@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -26,20 +28,10 @@
             </ul>
         </nav> 
 
-        <h2>Departamentos</h2>
-
-        <table>
-          <tr>
-            <th>Id</th>
-            <th>Nombre</th>
-          </tr>
-          @foreach($departamentos as $departamento)
-            <tr>
-              <td><a href="{{route('departamento.show',$departamento->id)}}">{{$departamento->id}}</a></td>
-              <td>{{$departamento->nombre}}</td>
-            </tr>
-          @endforeach
-        </table>
-
+       
+      
+    ID  {{$departamento->id}}<br>
+    NOMBRE  {{$departamento->nombre}}<br>
+    
     </body>
 </html>

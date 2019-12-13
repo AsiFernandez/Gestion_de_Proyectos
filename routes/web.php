@@ -25,12 +25,12 @@ Route::get('/empleados/{id}', 'EmpleadoController@show')->name('empleados.show')
 |Rutas para cosas del apartado proyectos
 */
 Route::get('/proyectos', 'ProyectoController@index')->name('proyecto.index');
-
+Route::get('/proyectos/{id}', 'ProyectoController@show')->name('proyecto.show');
 /*
 |Rutas para cosas del apartadod departamentos
 */
 Route::get('/departamentos', 'DepartamentoController@index')->name('departamentos.index');
-
+Route::get('/departamentos/{id}', 'DepartamentoController@show')->name('departamento.show');
 
 /*
 |
